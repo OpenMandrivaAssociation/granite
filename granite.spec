@@ -6,7 +6,7 @@
 
 Name:		granite
 Summary:	elementary companion library for GTK+ and GLib
-Version:	5.2.2
+Version:	5.3.1
 Release:	1
 License:	LGPLv3+
 Group:		System/Libraries
@@ -14,6 +14,7 @@ URL:		https://github.com/elementary/granite
 Source0:	https://github.com/elementary/granite/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:	cmake
+BuildRequires:  meson
 BuildRequires:	gettext
 BuildRequires:	vala >= 0.40
 
@@ -69,11 +70,11 @@ Header files for development with %{name}.
 %autosetup
 
 %build
-%cmake
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install -C build
+%meson_install
 
 %find_lang %{name}
 
@@ -81,7 +82,8 @@ Header files for development with %{name}.
 %doc README.md
 %license COPYING
 %{_bindir}/%{name}-demo
-%{_datadir}/applications/%{name}-demo.desktop
+%{_datadir}/applications/io.elementary.granite.demo.desktop
+%{_datadir}/metainfo/granite.appdata.xml
 %{_iconsdir}/hicolor/*/actions/appointment.svg
 %{_iconsdir}/hicolor/*/actions/open-menu.svg
 %{_iconsdir}/hicolor/scalable/actions/open-menu-symbolic.svg
