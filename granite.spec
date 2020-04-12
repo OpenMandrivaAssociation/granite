@@ -82,7 +82,8 @@ Header files for development with %{name}.
 %doc README.md
 %license COPYING
 %{_bindir}/%{name}-demo
-#{_datadir}/applications/%{name}-demo.desktop
+%{_datadir}/applications/io.elementary.granite.demo.desktop
+%{_datadir}/metainfo/granite.appdata.xml
 %{_iconsdir}/hicolor/*/actions/appointment.svg
 %{_iconsdir}/hicolor/*/actions/open-menu.svg
 %{_iconsdir}/hicolor/scalable/actions/open-menu-symbolic.svg
