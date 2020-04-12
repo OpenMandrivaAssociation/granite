@@ -57,7 +57,7 @@ GObject Introspection interface description for Granite.
 %package -n	%{develname}
 Summary:	Development package for %{name}
 Group:		Development/C++
-Requires:	%{libname} = %{version}-%{release}
+Requires:	%{libname} = %{version}
 Requires:	%{girgranitename} = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
 
