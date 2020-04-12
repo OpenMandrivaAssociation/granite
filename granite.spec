@@ -82,7 +82,7 @@ Header files for development with %{name}.
 %doc README.md
 %license COPYING
 %{_bindir}/%{name}-demo
-%{_datadir}/applications/%{name}-demo.desktop
+#{_datadir}/applications/%{name}-demo.desktop
 %{_iconsdir}/hicolor/*/actions/appointment.svg
 %{_iconsdir}/hicolor/*/actions/open-menu.svg
 %{_iconsdir}/hicolor/scalable/actions/open-menu-symbolic.svg
