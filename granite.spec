@@ -47,7 +47,7 @@ apps built for elementary.
 %package -n	%{girgranitename}
 Summary:	GObject Introspection interface description for Granite
 Group:		System/Libraries
-Requires:	%{libname} = %{version}-%{release}
+Requires:	%{libname} = %{version}
 
 %description -n	%{girgranitename}
 GObject Introspection interface description for Granite.
@@ -58,7 +58,7 @@ GObject Introspection interface description for Granite.
 Summary:	Development package for %{name}
 Group:		Development/C++
 Requires:	%{libname} = %{version}-%{release}
-Requires:	%{girgranitename} = %{version}-%{release}
+Requires:	%{girgranitename} = %{version}
 Provides:	%{name}-devel = %{version}-%{release}
 
 %description -n	%{develname}
