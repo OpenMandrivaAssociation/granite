@@ -14,6 +14,7 @@ URL:		https://github.com/elementary/granite
 Source0:	https://github.com/elementary/granite/archive/%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:	cmake
+BuildRequires:  meson
 BuildRequires:	gettext
 BuildRequires:	vala >= 0.40
 
@@ -69,11 +70,11 @@ Header files for development with %{name}.
 %autosetup
 
 %build
-%cmake
-%make_build
+%meson
+%meson_build
 
 %install
-%make_install -C build
+%meson_install
 
 %find_lang %{name}
 
