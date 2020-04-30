@@ -6,7 +6,7 @@
 
 Name:		granite
 Summary:	elementary companion library for GTK+ and GLib
-Version:	5.3.1
+Version:	5.4.0
 Release:	1
 License:	LGPLv3+
 Group:		System/Libraries
