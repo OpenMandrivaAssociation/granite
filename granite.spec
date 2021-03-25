@@ -1,5 +1,5 @@
 %define api		1.0
-%define major		5
+%define major		6
 %define libname		%mklibname %{name} %{major}
 %define girgranitename	%mklibname %{name}-gir %{api}
 %define develname	%mklibname %{name} -d
