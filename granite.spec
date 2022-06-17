@@ -80,9 +80,9 @@ sed -i "s|@PLAINNAME@|libgranite.so.%{major}|" lib/meson.build
 %install
 %meson_install
 
-%find_lang %{name}
-
-%files -f %{name}.lang
+#find_lang %{name}
+#-f %{name}.lang
+%files 
 %doc README.md
 %license COPYING
 %{_bindir}/%{name}-demo
