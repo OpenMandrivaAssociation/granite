@@ -6,7 +6,7 @@
 
 Name:		granite
 Summary:	elementary companion library for GTK+ and GLib
-Version:	6.2.0
+Version:	7.0.0
 Release:	1
 License:	LGPLv3+
 Group:		System/Libraries
@@ -21,6 +21,7 @@ BuildRequires:	vala >= 0.40
 BuildRequires:	pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0) >= 3.22
+BuildRequires:	pkgconfig(gtk4)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 
 # granite provides and needs some generic icons
