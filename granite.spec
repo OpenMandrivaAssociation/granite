@@ -85,12 +85,12 @@ sed -i "s|@PLAINNAME@|libgranite.so.%{major}|" lib/meson.build
 %files 
 %doc README.md
 %license COPYING
-%{_bindir}/%{name}-demo
-%{_datadir}/applications/io.elementary.granite.demo.desktop
-%{_datadir}/metainfo/granite.appdata.xml
-%{_iconsdir}/hicolor/*/actions/appointment.svg
-%{_iconsdir}/hicolor/*/actions/open-menu.svg
-%{_iconsdir}/hicolor/scalable/actions/open-menu-symbolic.svg
+#{_bindir}/%{name}-demo
+#{_datadir}/applications/io.elementary.granite.demo.desktop
+#{_datadir}/metainfo/granite.appdata.xml
+#{_iconsdir}/hicolor/*/actions/appointment.svg
+#{_iconsdir}/hicolor/*/actions/open-menu.svg
+#{_iconsdir}/hicolor/scalable/actions/open-menu-symbolic.svg
 
 %files -n %{libname}
 %doc README.md
