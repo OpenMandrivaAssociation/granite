@@ -94,7 +94,7 @@ sed -i "s|@PLAINNAME@|libgranite.so.%{major}|" lib/meson.build
 
 %files -n %{libname}
 %doc README.md
-%{_libdir}/lib%{name}.so.%{major}{,.*}
+#{_libdir}/lib%{name}.so.%{major}{,.*}
 
 %files -n %{girgranitename}
 %doc README.md
