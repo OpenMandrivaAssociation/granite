@@ -98,13 +98,13 @@ sed -i "s|@PLAINNAME@|libgranite.so.%{major}|" lib/meson.build
 
 %files -n %{girgranitename}
 %doc README.md
-%{_libdir}/girepository-%{api}/Granite-%{api}.typelib
+#{_libdir}/girepository-%{api}/Granite-%{api}.typelib
 
 %files -n %{develname}
 %doc README.md
-%{_includedir}/%{name}/
-%{_libdir}/lib%{name}.so
-%{_libdir}/pkgconfig/%{name}.pc
-%{_datadir}/gir-%{api}/Granite-%{api}.gir
-%{_datadir}/vala/vapi/granite.deps
-%{_datadir}/vala/vapi/granite.vapi
+#{_includedir}/%{name}/
+#{_libdir}/lib%{name}.so
+#{_libdir}/pkgconfig/%{name}.pc
+#{_datadir}/gir-%{api}/Granite-%{api}.gir
+#{_datadir}/vala/vapi/granite.deps
+#{_datadir}/vala/vapi/granite.vapi
