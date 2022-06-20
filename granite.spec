@@ -105,6 +105,6 @@ sed -i "s|@PLAINNAME@|libgranite.so.%{major}|" lib/meson.build
 %{_includedir}/granite-%{major}/granite-7.h
 %{_libdir}/lib%{name}-%{major}.so
 %{_libdir}/pkgconfig/%{name}-%{major}.pc
-%{_datadir}/gir-%{api}/Granite-%{major}.gir
+%{_datadir}/gir-%{api}/Granite-%{major}.0.gir
 %{_datadir}/vala/vapi/granite-%{major}.deps
 %{_datadir}/vala/vapi/granite-%{major}.vapi
