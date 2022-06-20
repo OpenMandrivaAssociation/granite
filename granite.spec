@@ -1,5 +1,5 @@
 %define api		1.0
-%define major		6
+%define major		7
 %define libname		%mklibname %{name} %{major}
 %define girgranitename	%mklibname %{name}-gir %{api}
 %define develname	%mklibname %{name} -d
@@ -71,7 +71,7 @@ Header files for development with %{name}.
 %autosetup -p1
 
 #Fix broken requires on gir package
-sed -i "s|@PLAINNAME@|libgranite.so.%{major}|" lib/meson.build
+sed -i "s|@PLAINNAME@|libgranite-7.so.%{major}|" lib/meson.build
 
 %build
 %meson
@@ -80,31 +80,31 @@ sed -i "s|@PLAINNAME@|libgranite.so.%{major}|" lib/meson.build
 %install
 %meson_install
 
-%find_lang %{name}
+%find_lang %{name}-%{major}
 
-%files -f %{name}.lang
+%files -f %{name}-%{major}.lang
 %doc README.md
 %license COPYING
-%{_bindir}/%{name}-demo
-%{_datadir}/applications/io.elementary.granite.demo.desktop
-%{_datadir}/metainfo/granite.appdata.xml
-%{_iconsdir}/hicolor/*/actions/appointment.svg
-%{_iconsdir}/hicolor/*/actions/open-menu.svg
-%{_iconsdir}/hicolor/scalable/actions/open-menu-symbolic.svg
+%{_bindir}/granite-7-demo
+%{_datadir}/applications/io.elementary.granite-%{major}.demo.desktop
+%{_datadir}/metainfo/granite-%{major}.appdata.xml
+#{_iconsdir}/hicolor/*/actions/appointment.svg
+#{_iconsdir}/hicolor/*/actions/open-menu.svg
+#{_iconsdir}/hicolor/scalable/actions/open-menu-symbolic.svg
 
 %files -n %{libname}
 %doc README.md
-%{_libdir}/lib%{name}.so.%{major}{,.*}
+%{_libdir}/lib%{name}-%{major}.so.%{major}{,.*}
 
 %files -n %{girgranitename}
 %doc README.md
-%{_libdir}/girepository-%{api}/Granite-%{api}.typelib
+%{_libdir}/girepository-%{api}/Granite-%{major}.0.typelib
 
 %files -n %{develname}
 %doc README.md
-%{_includedir}/%{name}/
-%{_libdir}/lib%{name}.so
-%{_libdir}/pkgconfig/%{name}.pc
-%{_datadir}/gir-%{api}/Granite-%{api}.gir
-%{_datadir}/vala/vapi/granite.deps
-%{_datadir}/vala/vapi/granite.vapi
+%{_includedir}/granite-%{major}/granite-7.h
+%{_libdir}/lib%{name}-%{major}.so
+%{_libdir}/pkgconfig/%{name}-%{major}.pc
+%{_datadir}/gir-%{api}/Granite-%{major}.0.gir
+%{_datadir}/vala/vapi/granite-%{major}.deps
+%{_datadir}/vala/vapi/granite-%{major}.vapi
