@@ -71,7 +71,7 @@ Header files for development with %{name}.
 %autosetup -p1
 
 #Fix broken requires on gir package
-sed -i "s|@PLAINNAME@|libgranite.so.%{major}|" lib/meson.build
+#sed -i "s|@PLAINNAME@|libgranite.so.%{major}|" lib/meson.build
 
 %build
 %meson
