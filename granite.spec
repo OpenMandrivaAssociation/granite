@@ -1,13 +1,15 @@
 %define api		1.0
 %define major		7
-%define libname		%mklibname %{name} %{major}
-%define girgranitename	%mklibname %{name}-gir %{api}
+%define libname		%mklibname %{name}
+%define oldlibname		%mklibname %{name} 7
+%define girgranitename	%mklibname %{name}-gir
+%define oldgirgranitename	%mklibname %{name}-gir 1.0
 %define develname	%mklibname %{name} -d
 
 Name:		granite
 Summary:	elementary companion library for GTK+ and GLib
-Version:	7.1.0
-Release:	3
+Version:	7.5.0
+Release:	1
 License:	LGPLv3+
 Group:		System/Libraries
 URL:		https://github.com/elementary/granite
@@ -37,6 +39,7 @@ apps built for elementary.
 %package -n	%{libname}
 Summary:	elementary companion library for GTK+ and GLib
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n	%{libname}
 Granite is a companion library for GTK+ and GLib. Among other things, it
@@ -49,6 +52,7 @@ apps built for elementary.
 Summary:	GObject Introspection interface description for Granite
 Group:		System/Libraries
 Requires:	%{libname} = %{version}-%{release}
+%rename %{oldgirgranitename}
 
 %description -n	%{girgranitename}
 GObject Introspection interface description for Granite.
