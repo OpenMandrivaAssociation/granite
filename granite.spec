@@ -91,10 +91,10 @@ sed -i "s|@PLAINNAME@|libgranite-7.so.%{major}|" lib/meson.build
 %license COPYING
 %{_bindir}/granite-7-demo
 %{_datadir}/applications/io.elementary.granite-%{major}.demo.desktop
-#{_datadir}/metainfo/granite-%{major}.appdata.xml
-#{_iconsdir}/hicolor/*/actions/appointment.svg
-#{_iconsdir}/hicolor/*/actions/open-menu.svg
-#{_iconsdir}/hicolor/scalable/actions/open-menu-symbolic.svg
+%{_datadir}/metainfo/granite-%{major}.metainfo.xml
+%{_datadir}/themes/Granite/gtk-4.0/gtk-dark.css
+%{_datadir}/themes/Granite/gtk-4.0/gtk.css
+%{_iconsdir}/hicolor/*x*/apps/io.elementary.granite-7.svg
 
 %files -n %{libname}
 %doc README.md
