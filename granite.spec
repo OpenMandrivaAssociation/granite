@@ -19,7 +19,7 @@ BuildRequires:	cmake
 BuildRequires:  meson
 BuildRequires:	gettext
 BuildRequires:	vala >= 0.40
-
+BuildRequires:  sassc
 BuildRequires:	pkgconfig(gee-0.8)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gtk+-3.0) >= 3.22
